@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{%block title %}AddData{%endblock%}
+
+{% block content %}
+<head>
+    <style>
+        button{
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+
+        }
+        button:hover{
+            background-color: crimson;
+        }
+        
+    </style>
+</head>
+
+<h1 align="center">Add Your Feedback Here</h1>
+<form method="POST">
+    {%csrf_token%}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+<p align="center"> Note:-Here You can Add Your Feedback and Edit The Posted FeedBack</p>
+
+{%endblock%}

@@ -1,0 +1,35 @@
+<head>
+    <title>navbar</title>
+    <link rel="icon" type="images/icon" href="logo1.png">
+    <style>
+    .nv{
+        background-color:rgb(89, 166, 185);
+    }
+    .nav-link{
+        color:white;
+
+    }
+    .logo1{
+        width: 200px;
+        height:40px;
+    }
+    </style>
+</head>
+<nav class="navbar navbar-dark nv">
+    <a class="nav-link" href="http://127.0.0.1:8000/"><img class="logo" height="100" src="https://livewireindia.com/courses/images/livewirelogo.png"></a>
+    
+    <a class="nav-link" href="http://127.0.0.1:8000/">Home</a>
+    <a class="nav-link" href="http://127.0.0.1:8000/todos">All Feedback</a> 
+    <a class="nav-link" href="http://127.0.0.1:8000/todos/add">Add your feedback</a> 
+    <a class="nav-link" href="http://127.0.0.1:8000/todos/contact">Contact</a>
+    <a class="nav-link" href="http://127.0.0.1:8000/todos/about">About</a>
+    <a class="nav-link" href="http://127.0.0.1:8000/account/signup">signup</a>
+    <a class="nav-link" href="http://127.0.0.1:8000/account/login">signin</a>
+    <div>
+        {% if user.is_authenticated %}
+        <p>Hii,{{user.username}}!!!Welcome<a href="{% url 'logout' %}">Logout</a></p>
+        {% endif %}
+    </div>
+
+
+</nav>

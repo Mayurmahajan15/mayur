@@ -1,0 +1,159 @@
+{%extends 'base.html'%}                                                                                                         
+
+{%block content%}
+<head>
+    <style>
+    .row{
+            margin-left: 100px;
+        }
+        hr{
+            color: red;
+        }
+        p{
+           font-weight: 500;
+        }
+        .pp{
+            text-align: center;
+        }
+        .row:after{
+            display: table;
+
+        }
+        .column{
+            float: left;
+            width: 33.33%;
+        }
+        li{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <img class="mySlides" width="100%" src="https://www.livewireindia.com/images/banner/ec-counsil-home.jpg">
+    <img class="mySlides" width="100%" src="https://www.livewireindia.com/images/banner/hybrid-banner.jpg">
+    <img class="mySlides" width="100%" src="https://www.livewireindia.com/images/course/partners.png">
+    <img class="mySlides" width="100%" src="https://www.livewireindia.com/images/content/bg/first.jpg">
+</div>
+<br>
+
+<div>
+    
+<h1 align="center">  Welcome to LIVEWIRE</h1>
+<p align="center">Education is any kind of knowledge transitioned into learning.</p>
+<p class="pp">
+  
+
+
+LIVEWIRE promote niche training in IT, Electronics & Electricals creating experts for emerging technology industries and specialist technology jobs. A part of CADD Centre, which is Asia's largest CAD/CAM/CAE training institute. LIVEWIRE is present in 100 locations across India and 6 Countries.
+
+Learn from the experts
+Being the Market leaders with a vast experience of 3 decade, LIVEWIRE courses are designed as per the industry needs.
+
+Guaranteed career growth
+The Product Portfolio is filled with technologies that are current and trending. We choose courses that has a high level of scope in the Job market.
+
+100K+ Trained Students
+Happy customers builds our strong Alumni network, where they share their industry experience for the next generation.
+
+ISO 29990:2010
+Certified for the Quality Training and Competence of learning service providers to all relevant stakeholders
+</p>
+</div>
+
+<hr><hr>
+<h2 align="center">Trending Courses</h2>
+<p align="center">_____</p>
+<div class="row">
+    <div class="card" style="width: 18rem;">
+        <img  width="250px" height="250px" src="https://content.techgig.com/thumb/msid-79386213,width-1200,height-900,resizemode-4/79386213.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Python</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </div>
+     &nbsp;&nbsp; &nbsp;&nbsp;
+      <div class="card" style="width: 18rem;">
+        <img  width="250px" height="250px" src="https://miro.medium.com/max/1024/1*3CXBOKNql4qS-lRyHT3pqw.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Machine Learning</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </div>
+      &nbsp;&nbsp; &nbsp;&nbsp;
+      <div class="card" style="width: 18rem;">
+        <img  width="250px" height="250px"src="https://bernardmarr.com/img/What%20Is%20The%20Importance%20Of%20Artificial%20Intelligence%20(AI).png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Artificial Intellegence</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </div>
+      &nbsp;&nbsp; &nbsp;&nbsp;
+      <div class="card" style="width: 18rem;">
+        <img width="250px" height="250px" src="https://d35fo82fjcw0y8.cloudfront.net/2019/01/17102218/data-science-in-marketing-post-venn-diagram.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Data Science</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">Enquire Now</a>
+        </div>
+      </div>
+</div>
+
+<div style="background-color: black;color: white;">
+    <div class="row">
+        <div class="column">
+           <p> ABOUT LIVEWIRE</p> 
+LIVEWIRE promote niche training in IT, Electronics & Electricals creating experts for emerging technology industries and specialist technology jobs. A part of CADD Centre, which is Asia's largest CAD/CAM/CAE training institute, LIVEWIRE is present in 100 locations across India and 8 International Locations.
+
+        </div>
+        <div class="column">
+            NEWSLETTER
+
+        </div>
+        <div class="column">
+            <p>CONTACT INFO</p>
+            1800-425-0220
+            info@livewireindia.com
+            1st Floor, K.R. Ahamed Sha office complex, No. 25, Dr. Radhakrishnan Salai, Mylapore,
+            Chennai - 600 004,
+            Tamil Nadu, Indi
+        </div>
+    </div>
+</div>
+<div style="background-color: black;color: white;">
+    <ul>
+        <li>Home</li>
+        <li>AboutUs</li>
+        <li>ContactUs</li>
+        <li>Terms&Condition</li>
+    </ul>
+    <p>LIVEWIRE - All rights reserved Â© 2019</p>
+    <div>
+        <p><i class="fa fa-facebook"></i></p>
+    </div>
+</div>
+
+<script>
+    var myIndex=0;
+    Livewire();
+    function Livewire() {
+        var i;
+        var x=document.getElementsByClassName('mySlides');
+        for(i=0;i<x.length;i++){
+            x[i].style.display="none";
+        }
+        myIndex++;
+        if(myIndex >x.length)
+        {myIndex=1}
+        x[myIndex-1].style.display="block";
+        setTimeout(Livewire,2000)
+
+    }
+</script>
+
+</body>
+{%endblock%}
